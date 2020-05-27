@@ -30,7 +30,7 @@ app.get("/blogs", function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render("index", {blogs: []}); 
+            res.render("index", {blogs: blogs});
         }
     })
 });
@@ -96,4 +96,5 @@ app.delete("/blogs/:id", function(req, res){
 });
 
 
-app.listen(process.env.PORT, process.env.IP);
+// app.listen(process.env.PORT, process.env.IP);
+app.listen(8080);
